@@ -43,7 +43,7 @@ func main() {
 
 	now := time.Now()
 	dayStart := time.Date(now.Year(), now.Month(), now.Day(), wakeTime.Hour(), wakeTime.Minute(), 0, 0, now.Location())
-	dayEnd := time.Date(now.Year(), now.Month(), now.Day()+1, sleepTime.Hour(), sleepTime.Minute(), 0, 0, now.Location())
+	dayEnd := time.Date(now.Year(), now.Month(), now.Day(), sleepTime.Hour(), sleepTime.Minute(), 0, 0, now.Location())
 
 	fmt.Printf("You should have %d steps\n", calc.GetSteps(*goal, now, dayStart, dayEnd))
 }
